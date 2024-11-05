@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
+import Home from './screens/Home';
+import GalleryPage from './screens/GaleryP27';
+import GalleryPagenine from './screens/GaleryP19';
+import GalleryPagezero from './screens/GaleryP20';
+import GalleryPageone from './screens/GaleryP21';
+import GalleryPagetwo from './screens/GaleryP22';
+import GalleryPagetree from './screens/GaleryP23';
+import GalleryPagefour from './screens/GaleryP24';
+import GalleryPagefive from './screens/GaleryP25';
+import GalleryPagesix from './screens/GaleryP26';
+
+
 
 function App() {
+
+  
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='App' > 
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery/19" element={<GalleryPagenine />} />
+          <Route path="/gallery/20" element={<GalleryPagezero />} />
+          <Route path="/gallery/21" element={<GalleryPageone />} />
+          <Route path="/gallery/22" element={<GalleryPagetwo />} />
+          <Route path="/gallery/23" element={<GalleryPagetree />} />
+          <Route path="/gallery/24" element={<GalleryPagefour />} />
+          <Route path="/gallery/25" element={<GalleryPagefive />} />
+          <Route path="/gallery/26" element={<GalleryPagesix />} />
+          <Route path="/gallery/27" element={<GalleryPage />} />
+        </Routes>
+    </Router>
+      </div>
   );
 }
 

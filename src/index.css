@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    @layer base{
+        @font-face {
+            font-family: "GillSans";
+            src: url("./fonts/Gill\ Sans.woff") format("woff");
+
+            font-family: "GillSansBoldItalic";
+            src: url("./fonts/Gill\ Sans\ Bold\ Italic.woff") format("woff");
+
+            font-family: "GillSansBold";
+            src: url("./fonts/Gill\ Sans\ Bold.woff") format("woff");
+
+            font-family: "GillSansHeavyItalic";
+            src: url("./fonts/Gill\ Sans\ Heavy\ Italic.woff") format("woff");
+
+            font-family: "GillSansHeavy";
+            src: url("./fonts/Gill\ Sans\ Heavy.woff") format("woff");
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            
+            font-family: "GillSansItalic";
+            src: url("./fonts/Gill\ Sans\ Italic.woff") format("woff");
+
+            font-family: "GillSansLightItalic";
+            src: url("./fonts/Gill\ Sans\ Light\ Italic.woff") format("woff");
+
+            font-family: "GillSansLight";
+            src: url("./fonts/Gill\ Sans\ Light.woff") format("woff");
+
+            font-family: "GillSansMItalic";
+            src: url("./fonts/Gill\ Sans\ Medium\ Italic.woff") format("woff");
+
+            font-family: "GillSansMedium";
+            src: url("./fonts/Gill\ Sans\ Medium.woff") format("woff");
+
+            font-family: "GillSansCondensed";
+            src: url("./fonts/GillSans\ Condensed.woff") format("woff");
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            font-family: "GillSansCondensedBold";
+            src: url("./fonts/GillSans-SemiBold.woff") format("woff");
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+
+        }
+    }
+
+
+@keyframes slide {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}  
+}
+.animate-slide-infinite{
+    animation: slide 15s linear infinite;
 }
